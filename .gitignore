@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+build/
+dist/
+*.exe
+*.rar
+*.zip
+*.key
+*.log
+.vs/
+bin/
+obj/
+*.suo
+*.user

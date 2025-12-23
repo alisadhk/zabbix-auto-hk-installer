@@ -1,0 +1,33 @@
+# UTF-8
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x4,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '040904B0',
+          [
+            StringStruct('CompanyName', 'HK - hyper knowledge'),
+            StringStruct('FileDescription', 'Zabbix Auto-HK Installer'),
+            StringStruct('FileVersion', '3.4.2'),
+            StringStruct('InternalName', 'Zabbix Auto-HK Installer'),
+            StringStruct('LegalCopyright', 'Copyright © 2025 *****'),
+            StringStruct('OriginalFilename', 'installer.exe'),
+            StringStruct('ProductName', 'Zabbix Auto-HK Installer'),
+            StringStruct('ProductVersion', '3.4.2'),
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [1033, 1200])])
+  ]
+)
