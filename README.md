@@ -3,10 +3,10 @@
 <p align="center"><b>Install Zabbix 7.4 on Ubuntu 24.04 over SSH with one click</b></p>
 
 <p align="center">
-  ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-  ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
-  ![Updated](https://img.shields.io/badge/updated-2025-12-23-success)
-  [![Releases](https://img.shields.io/badge/downloads-Releases-blue)](https://github.com/alisadhk/zabbix-auto-hk-installer/releases/latest)
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white" alt="Platform">
+  <img src="https://img.shields.io/badge/updated-2025--12--23-success" alt="Updated">
+  <a href="https://github.com/alisadhk/zabbix-auto-hk-installer/releases/latest"><img src="https://img.shields.io/badge/downloads-Releases-blue" alt="Releases"></a>
 </p>
 
 ---
@@ -19,6 +19,20 @@ A PyQt5 wizard that connects to a fresh Ubuntu 24.04 server over SSH (paramiko) 
 - Database creation and DBPassword configuration
 - Live execution log with progress bar
 - Manual installation guide in the docs folder
+- Adds the official Zabbix 7.4 repository for Ubuntu 24.04
+- Installs server, frontend, Apache config, SQL scripts and agent
+- Creates the MySQL database and sets the DBPassword for you
+
+## How it works
+- The installer connects over SSH, updates the system and installs the Zabbix release package.
+- It installs zabbix-server-mysql, the PHP frontend, the Apache configuration, SQL scripts and the agent, plus MySQL.
+- It creates the zabbix database and user, imports the schema and writes DBPassword into zabbix_server.conf.
+- It restarts and enables the services; finish the wizard at http://SERVER-IP/zabbix/.
+
+## Requirements
+- Ubuntu 24.04 server with SSH and sudo/root access.
+- Outbound Internet on the server.
+- Windows 10/11 for the installer GUI.
 
 ## Screenshots
 <p align="center"><img src="screenshots/screenshot-1.png" alt="Zabbix Auto-HK Installer screenshot" width="720"></p>
@@ -54,6 +68,11 @@ python 333.py
 
 ## Configuration and privacy
 - All sensitive values from the original private version (passwords, tokens, license codes, user names, internal IP addresses, personal names and links) were replaced with `*****`.
+
+## Troubleshooting
+- Frontend shows a database error: re-run the installer or follow docs/manual-install.txt step by step.
+- Package not found: make sure the server really runs Ubuntu 24.04.
+- The shipped EXE is older than the source: rebuild it from 333.py for the latest logic.
 
 ## Build the executable yourself
 ```bash
